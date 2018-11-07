@@ -1,0 +1,99 @@
+﻿@model PARKJS.WORK.STUDY04.Models.Actress.Actress_JP
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Actress_JP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ranking)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ranking)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityTime_From)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityTime_From)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityTime_To)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityTime_To)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RegistDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Actr_JP_ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
