@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PARKJS.WORK.STUDY04.Data;
+using PARKJS.WORK.STUDY04.Models.Actress;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PARKJS.WORK.STUDY04.Models.Actress
+namespace PARKJS.WORK.STUDY04.Data.Seed
 {
     public static class SeedData_Actress_JP
     {
@@ -36,7 +37,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -53,7 +55,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 24,
                         Rate = 49,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -70,7 +73,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 6,
                         Rate = 0,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -87,7 +91,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 9,
                         Rate = 12,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -104,7 +109,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -121,7 +127,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -138,7 +145,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -155,7 +163,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -172,7 +181,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -189,7 +199,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -206,7 +217,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -223,7 +235,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -240,7 +253,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     },
 
                     new Actress_JP
@@ -257,7 +271,8 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
                         Ranking = 4,
                         Rate = 9,
                         RegistDate = DateTime.Now,
-                        UpdateDate = DateTime.Now
+                        UpdateDate = DateTime.Now,
+                        Comment = "가나다라"
                     }
                 );
                 context.SaveChanges();

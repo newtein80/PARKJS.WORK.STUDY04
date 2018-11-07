@@ -19,10 +19,39 @@ namespace PARKJS.WORK.STUDY04.Controllers.Actress
             _context = context;
         }
 
-        // GET: Actress_JP
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string i_selectedCategory, string i_searchString) // method의 파라미터는 View 의 asp-for 의 이름과 같음
         {
-            return View(await _context.Actress_JP.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> categoryQuery = from m in _context.Actress_JP
+                                            orderby m.CategoryId
+                                            select m.CategoryId;
+
+            var _actress_JPs = from m in _context.Actress_JP
+                         select m;
+
+            if (!String.IsNullOrEmpty(i_searchString))
+            {
+                _actress_JPs = _actress_JPs.Where(s => s.LastName.Contains(i_searchString));
+            }
+
+            if (!String.IsNullOrEmpty(i_selectedCategory))
+            {
+                _actress_JPs = _actress_JPs.Where(x => x.CategoryId == i_selectedCategory);
+            }
+
+            var movieGenreVM = new Acrtess_JP_SearchMV();
+            movieGenreVM.categoryIds = new SelectList(await categoryQuery.Distinct().ToListAsync());
+            movieGenreVM.actress_JPs = await _actress_JPs.ToListAsync();
+            movieGenreVM.i_searchString = i_searchString;
+
+            return View(movieGenreVM);
+        }
+
+
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Actress_JP/Details/5
@@ -54,7 +83,7 @@ namespace PARKJS.WORK.STUDY04.Controllers.Actress
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Actr_JP_ID,CategoryId,FirstName,LastName,ProfessionalName,Age,BirthDay,Nationality,Rate,Ranking,ActivityTime_From,ActivityTime_To,RegistDate,UpdateDate")] Actress_JP actress_JP)
+        public async Task<IActionResult> Create([Bind("Actr_JP_ID,CategoryId,FirstName,LastName,ProfessionalName,Age,BirthDay,Nationality,Rate,Ranking,ActivityTime_From,ActivityTime_To,RegistDate,UpdateDate,Comment")] Actress_JP actress_JP)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +115,7 @@ namespace PARKJS.WORK.STUDY04.Controllers.Actress
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Actr_JP_ID,CategoryId,FirstName,LastName,ProfessionalName,Age,BirthDay,Nationality,Rate,Ranking,ActivityTime_From,ActivityTime_To,RegistDate,UpdateDate")] Actress_JP actress_JP)
+        public async Task<IActionResult> Edit(int id, [Bind("Actr_JP_ID,CategoryId,FirstName,LastName,ProfessionalName,Age,BirthDay,Nationality,Rate,Ranking,ActivityTime_From,ActivityTime_To,RegistDate,UpdateDate,Comment")] Actress_JP actress_JP)
         {
             if (id != actress_JP.Actr_JP_ID)
             {

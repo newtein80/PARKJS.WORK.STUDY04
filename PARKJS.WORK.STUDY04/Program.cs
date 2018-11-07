@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using PARKJS.WORK.STUDY04.Data;
+using PARKJS.WORK.STUDY04.Data.Seed;
 using PARKJS.WORK.STUDY04.Models.Actress;
 
 namespace PARKJS.WORK.STUDY04
