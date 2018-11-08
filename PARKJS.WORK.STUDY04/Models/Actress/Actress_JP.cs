@@ -40,7 +40,7 @@ namespace PARKJS.WORK.STUDY04.Models.Actress
 
         [Display(Name = "Regist Day")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy:MM:dd}", ApplyFormatInEditMode = true)]
         public DateTime RegistDate { get; set; }
 
         [Display(Name = "Update Day")]

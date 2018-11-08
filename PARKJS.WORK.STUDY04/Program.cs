@@ -30,6 +30,11 @@ namespace PARKJS.WORK.STUDY04
                     var context = services.GetRequiredService<ApplicationDbContext>();
                     context.Database.Migrate();
                     SeedData_Actress_JP.Initialize(services);
+
+                    // Account, Role Seed Data Create
+                    var serviceProvider = services.GetRequiredService<IServiceProvider>();
+                    var configuration = services.GetRequiredService<IConfiguration>();
+                    Seed_AccountRole.CreateRoles(serviceProvider, configuration).Wait();
                 }
                 catch (Exception ex)
                 {
